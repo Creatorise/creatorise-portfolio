@@ -1,5 +1,7 @@
+import dummyData from './dummyData.js';
+
 export default {
     fetchProjects: () => {
-        return 'Hello World!';
+        return dummyData.projects;
     },
 };
