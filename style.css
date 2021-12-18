@@ -5,3 +5,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html,
+body {
+    background: #121212;
+    color: #eee;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.projectList {
+    margin: 1rem;
+    list-style-type: none;
+}
+
+.projectList__item + .projectList__item {
+    padding-top: 1rem;
+}
+
+.projectList__item {
+    border-bottom: 3px solid #2d0c58;
+}
+
+.projectList__item:hover,
+.projectList__item:focus {
+    border-bottom: 3px solid #3f127a;
+}
+
+.projectList__item:active {
+    border-bottom: 3px solid #351e55;
+}

@@ -9,7 +9,8 @@ async function renderProjects() {
 
     const projectItems = projects.map(project => {
         const li = document.createElement('li');
-        li.innerText = `Title: ${project.title}`;
+        li.innerText = `${project.title}`;
+        li.classList.add('projectList__item');
         return li;
     });
 
