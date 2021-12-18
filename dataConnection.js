@@ -1,7 +1,7 @@
-import dummyData from './dummyData.js';
+import clientSideDummyData from './clientSideDummyData.js';
 
 export default {
     fetchProjects: () => {
-        return dummyData.projects;
+        return clientSideDummyData.projects;
     },
 };
