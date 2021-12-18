@@ -1,7 +1,21 @@
 import dataConnection from './dataConnection.js';
 
-window.onload = async () => {
+window.onload = () => {
+    renderProjects();
+};
+
+async function renderProjects() {
     const projects = await dataConnection.fetchProjects();
 
-    console.log(`window.onload ~ projects`, projects);
-};
+    const projectItems = projects.map(project => {
+        const li = document.createElement('li');
+        li.innerText = `Title: ${project.title}`;
+        return li;
+    });
+
+    const projectList = document.getElementById('projectList');
+
+    projectItems.forEach(projectItem => {
+        projectList.appendChild(projectItem);
+    });
+}
