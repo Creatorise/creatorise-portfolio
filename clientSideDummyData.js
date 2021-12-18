@@ -1,4 +1,4 @@
-export default {
+const data = {
     projects: [
         {
             title: 'Project 1',
@@ -11,3 +11,5 @@ export default {
         },
     ],
 };
+
+export default data;
