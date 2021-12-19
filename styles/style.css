@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #121212;
+  color: #eee;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.project__list {
+  margin: 1rem;
+  list-style-type: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.project__list__item {
+  border-bottom: 3px solid #2d0c58;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem;
+}
+
+.project__list__item:hover,
+.project__list__item:focus {
+  border-bottom: 3px solid #3f127a;
+  outline: none;
+  font-weight: bold;
+}
+
+.project__list__item:active {
+  border-bottom: 3px solid #351e55;
+  color: #888;
+}/*# sourceMappingURL=style.css.map */
