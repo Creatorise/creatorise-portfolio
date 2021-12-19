@@ -1,6 +1,6 @@
-import dataConnection from './dataConnection.js';
+import data_connection from './dataConnection.js';
 
-// Global variables
+// Global Variables
 
 // Elements
 
@@ -10,41 +10,43 @@ const project__sidebar__button = document.getElementById('project__sidebar__butt
 
 // Events
 
-window.onload = () => {
-    renderProjects();
-    makeSidebarHidable();
-};
+window.addEventListener('load', () => {
+    render_projects();
+    make_sidebar_hidable();
+});
 
-async function renderProjects() {
-    const projects = await dataConnection.fetchProjects();
+// Event Handlers
 
-    const projectItems = projects.map((project, index) => {
-        const li = document.createElement('li');
-        li.innerText = `${project.title}`;
-        li.classList.add('project__list__item');
-        li.setAttribute('tabindex', index + 1);
-        li.addEventListener('click', listItem_onclick);
-        return li;
+async function render_projects() {
+    const projects = await data_connection.fetchProjects();
+
+    const project_items = projects.map((project, index) => {
+        const project__list__item = document.createElement('li');
+        project__list__item.innerText = `${project.title}`;
+        project__list__item.classList.add('project__list__item');
+        project__list__item.setAttribute('tabindex', index + 1);
+        project__list__item.addEventListener('click', list_item_onclick);
+        return project__list__item;
     });
 
-    projectItems.forEach(projectItem => {
+    project_items.forEach(projectItem => {
         project__list.appendChild(projectItem);
     });
 }
 
-function listItem_onclick(event) {
+function list_item_onclick(event) {
     console.log(`listItem_onclick ~ event.target.innerText`, event.target.innerText);
 }
 
-function makeSidebarHidable() {
-    project__sidebar.addEventListener('click', toggleSidebarHidden);
+function make_sidebar_hidable() {
+    project__sidebar.addEventListener('click', toggle_sidebar_hidden);
 
-    project__sidebar__button.addEventListener('click', toggleSidebarHidden);
+    project__sidebar__button.addEventListener('click', toggle_sidebar_hidden);
 }
 
-function toggleSidebarHidden(event) {
-    // console.log(`toggleSidebarHidden ~ event.target`, event.target);
-    // console.log(`toggleSidebarHidden ~ project__sidebar`, project__sidebar);
+function toggle_sidebar_hidden(event) {
+    // console.log(`toggle_sidebar_hidden ~ event.target`, event.target);
+    // console.log(`toggle_sidebar_hidden ~ project__sidebar`, project__sidebar);
 
     if (event.target != project__sidebar) {
         project__sidebar.classList.remove('-hidden');
