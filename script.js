@@ -10,16 +10,16 @@ async function renderProjects() {
     const projectItems = projects.map((project, index) => {
         const li = document.createElement('li');
         li.innerText = `${project.title}`;
-        li.classList.add('projectList__item');
+        li.classList.add('project__list__item');
         li.setAttribute('tabindex', index + 1);
         li.addEventListener('click', listItem_onclick);
         return li;
     });
 
-    const projectList = document.getElementById('projectList');
+    const project__list = document.getElementById('project__list');
 
     projectItems.forEach(projectItem => {
-        projectList.appendChild(projectItem);
+        project__list.appendChild(projectItem);
     });
 }
 

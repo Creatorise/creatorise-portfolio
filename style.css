@@ -14,26 +14,26 @@ body {
         'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.projectList {
+.project__list {
     margin: 1rem;
     list-style-type: none;
     user-select: none;
 }
 
-.projectList__item {
+.project__list__item {
     border-bottom: 3px solid #2d0c58;
     padding-top: 1rem;
     padding-bottom: 0.1rem;
 }
 
-.projectList__item:hover,
-.projectList__item:focus {
+.project__list__item:hover,
+.project__list__item:focus {
     border-bottom: 3px solid #3f127a;
     outline: none;
     font-weight: bold;
 }
 
-.projectList__item:active {
+.project__list__item:active {
     border-bottom: 3px solid #351e55;
     color: #888;
 }
