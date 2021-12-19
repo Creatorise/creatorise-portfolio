@@ -18,4 +18,4 @@ Track working time
 
 ### CSS
 
-I use my own version of bem, though [this article interests me](https://css-tricks.com/abem-useful-adaptation-bem/)
+I use my own version of bem with sassy css, though [this article interests me](https://css-tricks.com/abem-useful-adaptation-bem/)

@@ -1,5 +1,7 @@
 import dataConnection from './dataConnection.js';
 
+const project__sidebar = document.querySelector('#project__sidebar');
+
 window.onload = () => {
     renderProjects();
     makeSidebarHidable();
@@ -29,12 +31,33 @@ function listItem_onclick(event) {
 }
 
 function makeSidebarHidable() {
-    const project__sidebar = document.querySelector('#project__sidebar');
-
     project__sidebar.addEventListener('click', toggleSidebarHidden);
+
+    const project__sidebar__toggle = document.querySelector('#project__sidebar__toggle');
+
+    project__sidebar__toggle.addEventListener('click', toggleSidebarHidden);
 }
 
 function toggleSidebarHidden(event) {
-    console.log(`toggleSidebarHidden ~ event.target`, event.target);
-    event.target.classList.toggle('-hidden');
+    // console.log(`toggleSidebarHidden ~ event.target`, event.target);
+    // console.log(`toggleSidebarHidden ~ project__sidebar`, project__sidebar);
+
+    if (event.target != project__sidebar) {
+        project__sidebar.classList.remove('-hidden');
+        return;
+    }
+
+    project__sidebar.classList.add('-hidden');
 }
+
+// function setSidebarHidden(event) {
+//     console.log(`setSidebarHidden ~ event.target`, event.target);
+//     console.log(`setSidebarHidden ~ project__sidebar`, project__sidebar);
+//     project__sidebar.classList.add('-hidden');
+// }
+
+// function removeSidebarHidden(event) {
+//     console.log(`removeSidebarHidden ~ event.target`, event.target);
+//     console.log(`removeSidebarHidden ~ project__sidebar`, project__sidebar);
+//     project__sidebar.classList.remove('-hidden');
+// }

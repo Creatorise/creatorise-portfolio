@@ -18,10 +18,16 @@ body {
   height: 100vh;
   background: #0a0a0a;
   transition: all 0.5s;
+  position: relative;
 }
 
 .project__sidebar.-hidden {
   margin-left: -100vw;
+}
+
+.project__sidebar__toggle {
+  position: absolute;
+  left: 100vw;
 }
 
 .project__list {
