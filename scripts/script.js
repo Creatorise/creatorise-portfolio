@@ -33,9 +33,9 @@ function listItem_onclick(event) {
 function makeSidebarHidable() {
     project__sidebar.addEventListener('click', toggleSidebarHidden);
 
-    const project__sidebar__toggle = document.querySelector('#project__sidebar__toggle');
+    const project__sidebar__button = document.querySelector('#project__sidebar__button');
 
-    project__sidebar__toggle.addEventListener('click', toggleSidebarHidden);
+    project__sidebar__button.addEventListener('click', toggleSidebarHidden);
 }
 
 function toggleSidebarHidden(event) {
