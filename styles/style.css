@@ -13,8 +13,19 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.project__sidebar {
+  width: 100vw;
+  height: 100vh;
+  background: #0a0a0a;
+  transition: all 0.5s;
+}
+
+.project__sidebar.-hidden {
+  margin-left: -100vw;
+}
+
 .project__list {
-  margin: 1rem;
+  margin: 0 1rem;
   list-style-type: none;
   -webkit-user-select: none;
      -moz-user-select: none;

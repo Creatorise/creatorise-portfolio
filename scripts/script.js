@@ -2,6 +2,7 @@ import dataConnection from './dataConnection.js';
 
 window.onload = () => {
     renderProjects();
+    makeSidebarHidable();
 };
 
 async function renderProjects() {
@@ -25,4 +26,15 @@ async function renderProjects() {
 
 function listItem_onclick(event) {
     console.log(`listItem_onclick ~ event.target.innerText`, event.target.innerText);
+}
+
+function makeSidebarHidable() {
+    const project__sidebar = document.querySelector('#project__sidebar');
+
+    project__sidebar.addEventListener('click', toggleSidebarHidden);
+}
+
+function toggleSidebarHidden(event) {
+    console.log(`toggleSidebarHidden ~ event.target`, event.target);
+    event.target.classList.toggle('-hidden');
 }
