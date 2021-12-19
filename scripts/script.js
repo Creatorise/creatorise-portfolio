@@ -1,6 +1,14 @@
 import dataConnection from './dataConnection.js';
 
-const project__sidebar = document.querySelector('#project__sidebar');
+// Global variables
+
+// Elements
+
+const project__sidebar = document.getElementById('project__sidebar');
+const project__list = document.getElementById('project__list');
+const project__sidebar__button = document.getElementById('project__sidebar__button');
+
+// Events
 
 window.onload = () => {
     renderProjects();
@@ -19,8 +27,6 @@ async function renderProjects() {
         return li;
     });
 
-    const project__list = document.getElementById('project__list');
-
     projectItems.forEach(projectItem => {
         project__list.appendChild(projectItem);
     });
@@ -32,8 +38,6 @@ function listItem_onclick(event) {
 
 function makeSidebarHidable() {
     project__sidebar.addEventListener('click', toggleSidebarHidden);
-
-    const project__sidebar__button = document.querySelector('#project__sidebar__button');
 
     project__sidebar__button.addEventListener('click', toggleSidebarHidden);
 }
