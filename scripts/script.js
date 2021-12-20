@@ -8,14 +8,9 @@ const project__sidebar = document.getElementById('project__sidebar');
 const project__list = document.getElementById('project__list');
 const project__sidebar__button = document.getElementById('project__sidebar__button');
 
-// Event Listeners
+// Onload
 
-window.addEventListener('load', () => {
-    render_projects();
-    make_sidebar_hidable();
-});
-
-// Event Handlers
+render_projects();
 
 async function render_projects() {
     const projects = await data_connection.fetch_projects();
@@ -25,7 +20,7 @@ async function render_projects() {
         project__list__item.innerText = `${project.title}`;
         project__list__item.classList.add('a_project__list__item');
         project__list__item.setAttribute('tabindex', index + 1);
-        project__list__item.addEventListener('click', list_item_onclick);
+        project__list__item.addEventListener('click', project__list__item_clicked);
         return project__list__item;
     });
 
@@ -34,14 +29,19 @@ async function render_projects() {
     });
 }
 
-function list_item_onclick(event) {
-    console.log(`listItem_onclick ~ event.target.innerText`, event.target.innerText);
-}
+// Event Listeners
 
-function make_sidebar_hidable() {
-    project__sidebar.addEventListener('click', toggle_sidebar_hidden);
+// Make sidebar hidable
+project__sidebar.addEventListener('click', toggle_sidebar_hidden);
+project__sidebar__button.addEventListener('click', toggle_sidebar_hidden);
 
-    project__sidebar__button.addEventListener('click', toggle_sidebar_hidden);
+// Event Handlers
+
+function project__list__item_clicked(event) {
+    console.log(
+        `project__list__item_clicked ~ event.target.innerText`,
+        event.target.innerText
+    );
 }
 
 function toggle_sidebar_hidden(event) {
