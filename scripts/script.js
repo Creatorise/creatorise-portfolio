@@ -31,11 +31,20 @@ async function render_projects() {
 
 // Event Listeners
 
-// Make sidebar hidable
-project__sidebar.addEventListener('click', toggle_sidebar_hidden);
-project__sidebar__button.addEventListener('click', toggle_sidebar_hidden);
+window.addEventListener('click', toggle_project_sidebar);
 
 // Event Handlers
+
+function toggle_project_sidebar(event) {
+    console.log(`toggle_project_sidebar ~ event.target`, event.target);
+
+    if (event.target === project__sidebar__button) {
+        project__sidebar.classList.toggle('-hidden');
+        return;
+    }
+
+    project__sidebar.classList.add('-hidden');
+}
 
 function project__list__item_clicked(event) {
     console.log(
@@ -43,27 +52,3 @@ function project__list__item_clicked(event) {
         event.target.innerText
     );
 }
-
-function toggle_sidebar_hidden(event) {
-    // console.log(`toggle_sidebar_hidden ~ event.target`, event.target);
-    // console.log(`toggle_sidebar_hidden ~ project__sidebar`, project__sidebar);
-
-    if (event.target != project__sidebar) {
-        project__sidebar.classList.remove('-hidden');
-        return;
-    }
-
-    project__sidebar.classList.add('-hidden');
-}
-
-// function setSidebarHidden(event) {
-//     console.log(`setSidebarHidden ~ event.target`, event.target);
-//     console.log(`setSidebarHidden ~ project__sidebar`, project__sidebar);
-//     project__sidebar.classList.add('-hidden');
-// }
-
-// function removeSidebarHidden(event) {
-//     console.log(`removeSidebarHidden ~ event.target`, event.target);
-//     console.log(`removeSidebarHidden ~ project__sidebar`, project__sidebar);
-//     project__sidebar.classList.remove('-hidden');
-// }
