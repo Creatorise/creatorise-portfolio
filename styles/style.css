@@ -12,6 +12,7 @@ body {
   color: #eee;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .o_project__sidebar {
@@ -29,11 +30,11 @@ body {
 }
 
 .a_project__sidebar__button {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   position: absolute;
   left: calc(90vw - 1px);
-  bottom: 40px;
+  bottom: 100px;
   background: #0a0a0a;
   color: #eee;
   border: 1px solid #eee;

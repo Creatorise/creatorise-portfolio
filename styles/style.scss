@@ -16,6 +16,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
         'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 $sidebar_width: 90vw;
@@ -36,13 +37,13 @@ $sidebar_width: 90vw;
 }
 
 .a_project__sidebar__button {
-    $size: 70px;
+    $size: 90px;
     width: $size;
     height: $size;
 
     position: absolute;
     left: calc(#{$sidebar_width} - 1px);
-    bottom: 40px;
+    bottom: 100px;
 
     background: $color_darkest;
     color: $color_lightest;
