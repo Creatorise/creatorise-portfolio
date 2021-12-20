@@ -8,7 +8,7 @@ const project__sidebar = document.getElementById('project__sidebar');
 const project__list = document.getElementById('project__list');
 const project__sidebar__button = document.getElementById('project__sidebar__button');
 
-// Events
+// Event Listeners
 
 window.addEventListener('load', () => {
     render_projects();
@@ -23,7 +23,7 @@ async function render_projects() {
     const project_items = projects.map((project, index) => {
         const project__list__item = document.createElement('li');
         project__list__item.innerText = `${project.title}`;
-        project__list__item.classList.add('project__list__item');
+        project__list__item.classList.add('a_project__list__item');
         project__list__item.setAttribute('tabindex', index + 1);
         project__list__item.addEventListener('click', list_item_onclick);
         return project__list__item;

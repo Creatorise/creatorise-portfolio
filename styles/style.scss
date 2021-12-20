@@ -20,7 +20,7 @@ body {
 
 $sidebar_width: 90vw;
 
-.project__sidebar {
+.o_project__sidebar {
     width: $sidebar_width;
     height: 100vh;
     background: $color_darkest;
@@ -30,13 +30,13 @@ $sidebar_width: 90vw;
     border-right: 1px solid $color_lightest;
 }
 
-.project__sidebar.-hidden {
+.o_project__sidebar.-hidden {
     margin-left: calc(-#{$sidebar_width} + 1px);
     border-right: 1px solid #797979;
 }
 
-.project__sidebar__button {
-    $project__sidebar__button--size: 70px;
+.a_project__sidebar__button {
+    $size: 70px;
     width: $size;
     height: $size;
 
@@ -51,26 +51,26 @@ $sidebar_width: 90vw;
     border-radius: 0 5px 5px 0;
 }
 
-.project__list {
+.m_project__list {
     margin: 0 1rem;
     list-style-type: none;
     user-select: none;
 }
 
-.project__list__item {
+.a_project__list__item {
     border-bottom: 3px solid #2d0c58;
     padding-top: 1rem;
     padding-bottom: 0.1rem;
 }
 
-.project__list__item:hover,
-.project__list__item:focus {
+.a_project__list__item:hover,
+.a_project__list__item:focus {
     border-bottom: 3px solid #3f127a;
     outline: none;
     font-weight: bold;
 }
 
-.project__list__item:active {
+.a_project__list__item:active {
     border-bottom: 3px solid #351e55;
     color: #888;
 }
