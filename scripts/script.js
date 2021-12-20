@@ -1,4 +1,4 @@
-import data_connection from './dataConnection.js';
+import data_connection from './data_connection.js';
 
 // Global Variables
 
@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
 // Event Handlers
 
 async function render_projects() {
-    const projects = await data_connection.fetchProjects();
+    const projects = await data_connection.fetch_projects();
 
     const project_items = projects.map((project, index) => {
         const project__list__item = document.createElement('li');

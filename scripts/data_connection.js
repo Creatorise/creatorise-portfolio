@@ -1,14 +1,14 @@
-import clientSideDummyData from './clientSideDummyData.js';
+import client_side_dummy_data from './client_side_dummy_data.js';
 
-const dataConnection = {
-    fetchProjects,
+const data_connection = {
+    fetch_projects,
 };
 
-export default dataConnection;
+export default data_connection;
 
 // Methods
 
-async function fetchProjects() {
+async function fetch_projects() {
     // const todosResponse = await fetch('https://jsonplaceholder.typicode.com/todos');
     // console.log(`fetchProjects ~ todos`, todosResponse);
 
@@ -16,5 +16,5 @@ async function fetchProjects() {
     // console.log(`fetchProjects ~ todos`, todos);
 
     // return todos;
-    return new Promise((resolve, reject) => resolve(clientSideDummyData.projects));
+    return new Promise((resolve, reject) => resolve(client_side_dummy_data.projects));
 }
