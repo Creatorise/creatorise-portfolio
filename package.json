@@ -1,0 +1,28 @@
+{
+    "name": "creatorise-portfolio",
+    "description": "A portfolio for my coding projects",
+    "keywords": [
+        "portfolio"
+    ],
+    "license": "MIT",
+    "private": true,
+    "author": "DavLin",
+    "homepage": "https://github.com/davlin0222/creatorise#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/davlin0222/creatorise.git"
+    },
+    "bugs": {
+        "url": "https://github.com/davlin0222/creatorise/issues"
+    },
+    "version": "1.0",
+    "files": [],
+    "main": "index.js",
+    "scripts": {
+        "start": "node .",
+        "dev": "nodemon ."
+    },
+    "dependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
