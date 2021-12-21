@@ -2,25 +2,28 @@ import data_connection from './data_connection.js';
 
 // Global Variables
 
+let state = { projects: [] };
+
 // Elements
 
 const project__sidebar = document.getElementById('project__sidebar');
-const project__list = document.getElementById('project__list');
 const project__sidebar__button = document.getElementById('project__sidebar__button');
+const project__list = document.getElementById('project__list');
+const project__view = document.getElementById('project__view');
 
 // Onload
 
 render_projects();
 
 async function render_projects() {
-    const projects = await data_connection.fetch_projects();
+    state.projects = await data_connection.fetch_projects();
 
-    const project_items = projects.map((project, index) => {
+    const project_items = state.projects.map((project, index) => {
         const project__list__item = document.createElement('li');
         project__list__item.innerText = `${project.title}`;
         project__list__item.classList.add('a_project__list__item');
         project__list__item.setAttribute('tabindex', index + 1);
-        project__list__item.addEventListener('click', project__list__item_clicked);
+        project__list__item.addEventListener('click', _ => render_project(project.id));
         return project__list__item;
     });
 
@@ -46,9 +49,12 @@ function toggle_project_sidebar(event) {
     project__sidebar.classList.add('-hidden');
 }
 
-function project__list__item_clicked(event) {
-    console.log(
-        `project__list__item_clicked ~ event.target.innerText`,
-        event.target.innerText
-    );
+function render_project(project_id) {
+    console.log(`render_project ~ project_id`, project_id);
+    console.log(`project__list__item_clicked ~ state.projects`, state.projects);
+
+    const project = state.projects.find(project => project.id == project_id);
+    console.log(`render_project ~ project`, project);
+
+    project__view.innerText = project.title;
 }
