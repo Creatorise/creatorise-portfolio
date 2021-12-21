@@ -1,70 +1,78 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  background: #151515;
-  color: #eee;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
-  overflow-y: hidden;
+    background: #151515;
+    color: #eee;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .o_project__sidebar {
-  width: 90vw;
-  height: 100vh;
-  background: #0a0a0a;
-  transition: all 0.5s;
-  position: relative;
-  border-right: 1px solid #eee;
+    width: 90vw;
+    height: 100vh;
+    background: #0a0a0a;
+    transition: all 0.5s;
+    position: relative;
+    border-right: 1px solid #eee;
 }
 
 .o_project__sidebar.-hidden {
-  margin-left: calc(-90vw + 1px);
-  border-right: 1px solid #797979;
+    margin-left: calc(-90vw + 1px);
+    border-right: 1px solid #797979;
 }
 
 .a_project__sidebar__button {
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  left: calc(90vw - 1px);
-  bottom: 100px;
-  background: #0a0a0a;
-  color: #eee;
-  border: 1px solid #eee;
-  border-left: 0;
-  border-radius: 0 5px 5px 0;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: calc(90vw - 1px);
+    bottom: 100px;
+    background: #0a0a0a;
+    color: #eee;
+    border: 1px solid #eee;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
 }
 
 .m_project__list {
-  margin: 0 1rem;
-  list-style-type: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+    margin: 0 1rem;
+    list-style-type: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .a_project__list__item {
-  border-bottom: 3px solid #2d0c58;
-  padding-top: 1rem;
-  padding-bottom: 0.1rem;
+    border-bottom: 3px solid #2d0c58;
+    padding-top: 1rem;
+    padding-bottom: 0.1rem;
 }
 
 .a_project__list__item:hover,
 .a_project__list__item:focus {
-  border-bottom: 3px solid #3f127a;
-  outline: none;
-  font-weight: bold;
+    border-bottom: 3px solid #3f127a;
+    outline: none;
+    font-weight: bold;
 }
 
 .a_project__list__item:active {
-  border-bottom: 3px solid #351e55;
-  color: #888;
-}/*# sourceMappingURL=style.css.map */
+    border-bottom: 3px solid #351e55;
+    color: #888;
+}
+
+.o_project__view {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+} /*# sourceMappingURL=style.css.map */

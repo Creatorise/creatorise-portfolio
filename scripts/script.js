@@ -36,7 +36,7 @@ window.addEventListener('click', toggle_project_sidebar);
 // Event Handlers
 
 function toggle_project_sidebar(event) {
-    console.log(`toggle_project_sidebar ~ event.target`, event.target);
+    // console.log(`toggle_project_sidebar ~ event.target`, event.target);
 
     if (event.target === project__sidebar__button) {
         project__sidebar.classList.toggle('-hidden');

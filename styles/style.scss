@@ -75,3 +75,11 @@ $sidebar_width: 90vw;
     border-bottom: 3px solid #351e55;
     color: #888;
 }
+
+.o_project__view {
+    position: absolute;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+}
