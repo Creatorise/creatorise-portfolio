@@ -57,4 +57,5 @@ function render_project(project_id) {
     console.log(`render_project ~ project`, project);
 
     project__view.innerText = project.title;
+    project__view.innerText += project.text ? '\n\n' + project.text : '';
 }
