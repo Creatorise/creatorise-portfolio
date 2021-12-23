@@ -1,4 +1,7 @@
 # vscode extension local history
 .lh
 
+# store files local to programmer
+,local
+
 node_modules
